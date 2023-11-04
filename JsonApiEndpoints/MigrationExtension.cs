@@ -3,8 +3,19 @@ using SI_2.Entities;
 
 namespace JsonApiEndpoints;
 
+/// <summary>
+/// Provides extension methods for database migrations.
+/// </summary>
 public static class MigrationExtension
 {
+    /// <summary>
+    /// Applies any pending EF Core migrations to the database.
+    /// </summary>
+    /// <param name="application">The web application to configure.</param>
+    /// <remarks>
+    /// This method checks for pending migrations and applies them.
+    /// It also sets the command timeout to 300 seconds to ensure that long-running migrations do not fail.
+    /// </remarks>
     public static void UseDatabaseMigrations(this WebApplication application)
     {
         using (var scope = application.Services.CreateScope())
