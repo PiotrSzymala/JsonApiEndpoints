@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using SI_2.Entities;
+﻿using JsonApiEndpoints.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace JsonApiEndpoints;
 

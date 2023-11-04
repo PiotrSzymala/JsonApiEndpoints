@@ -1,8 +1,8 @@
+using JsonApiEndpoints.Entities;
+using JsonApiEndpoints.Models;
 using Microsoft.EntityFrameworkCore;
-using SI_2.Entities;
-using SI_2.Models;
 
-namespace SI_2.Services.JsonApiControllerService;
+namespace JsonApiEndpoints.Services.JsonApiControllerService;
 
 public class JsonApiControllerService : IJsonApiControllerService
 {

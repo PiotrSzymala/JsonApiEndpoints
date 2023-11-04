@@ -1,8 +1,8 @@
+using JsonApiEndpoints.Models;
+using JsonApiEndpoints.Services.JsonApiControllerService;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
-using SI_2.Models;
-using SI_2.Services.JsonApiControllerService;
 
 namespace JsonApiEndpoints.Controllers;
 

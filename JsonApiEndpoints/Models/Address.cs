@@ -1,7 +1,6 @@
-using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace SI_2.Models;
+namespace JsonApiEndpoints.Models;
 
 public class Address
 {

@@ -1,6 +1,6 @@
-using SI_2.Models;
+using JsonApiEndpoints.Models;
 
-namespace SI_2.Services.JsonApiControllerService;
+namespace JsonApiEndpoints.Services.JsonApiControllerService;
 
 public interface IJsonApiControllerService
 {

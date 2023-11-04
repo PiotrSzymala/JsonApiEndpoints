@@ -1,14 +1,13 @@
+using JsonApiEndpoints.Models;
 using Microsoft.EntityFrameworkCore;
-using SI_2.Models;
 
-namespace SI_2.Entities;
+namespace JsonApiEndpoints.Entities;
 
 public class ApplicationDbContext: DbContext
 {
     public DbSet<Post> Posts { get; set; }
     public DbSet<Comment> Comments { get; set; }
     public DbSet<User> Users { get; set; }
-
 
     public ApplicationDbContext()
     {

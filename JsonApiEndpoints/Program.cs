@@ -1,10 +1,9 @@
 using JsonApiEndpoints;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using SI_2.Client;
-using SI_2.Entities;
-using SI_2.Services.JsonApiControllerService;
 using System.Reflection;
+using JsonApiEndpoints.Entities;
+using JsonApiEndpoints.Services.JsonApiControllerService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +14,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IJsonApiControllerService, JsonApiControllerService>();
-builder.Services.AddScoped<JsonClient>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

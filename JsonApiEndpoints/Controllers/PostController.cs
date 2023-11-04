@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using JsonApiEndpoints.Models;
+using JsonApiEndpoints.Services.JsonApiControllerService;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
-using SI_2.Models;
-using SI_2.Services.JsonApiControllerService;
 
 namespace JsonApiEndpoints.Controllers
 {
@@ -34,7 +34,7 @@ namespace JsonApiEndpoints.Controllers
             var request = new RestRequest($"/posts/{postId}", Method.Get);
             var result = await _client.ExecuteAsync(request);
 
-            if (!string.IsNullOrEmpty(result.Content))
+            if (string.IsNullOrEmpty(result.Content))
                 return BadRequest("Wrong id");
 
             return Ok(result.Content);
