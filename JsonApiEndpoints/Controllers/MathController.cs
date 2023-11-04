@@ -18,6 +18,15 @@ public class MathController : ControllerBase
         _jsonApiControllerService = jsonApiControllerService;
     }
 
+    /// <summary>
+    /// Retrieves the sum of characters in the content of posts.
+    /// </summary>
+    /// <remarks>
+    /// This method counts characters in posts retrieved from the JSON placeholder API.
+    /// </remarks>
+    /// <response code="200">Returns the total count of characters in posts.</response>
+    /// <response code="400">If an error occurs in retrieving posts.</response>
+    /// <returns>The count of characters in post contents.</returns>
     [HttpGet]
     [Route("/calculate")]
     public async Task<IActionResult> GetNumbers()
