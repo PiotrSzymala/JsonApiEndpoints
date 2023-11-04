@@ -12,5 +12,4 @@ public class Geo
     [JsonProperty("lng")]
     public string Lng { get; set; }
 
-    public Address Address { get; set; }
 }

@@ -1,3 +1,4 @@
+using JsonApiEndpoints;
 using Microsoft.EntityFrameworkCore;
 using SI_2.Client;
 using SI_2.Entities;
@@ -31,5 +32,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+#region Connector Database migrations
+app.UseDatabaseMigrations();
+#endregion Connector Database migrations
 
 app.Run();

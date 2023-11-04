@@ -8,9 +8,7 @@ public class ApplicationDbContext: DbContext
     public DbSet<Post> Posts { get; set; }
     public DbSet<Comment> Comments { get; set; }
     public DbSet<User> Users { get; set; }
-    public DbSet<Address> Addresses { get; set; }
-    public DbSet<Company> Companies { get; set; }
-    public DbSet<Geo> Geos { get; set; }
+
 
     public ApplicationDbContext()
     {
@@ -34,15 +32,5 @@ public class ApplicationDbContext: DbContext
             .WithMany(p => p.Comments)
             .HasForeignKey(c => c.PostId);
         
-        modelBuilder.Entity<User>()
-            .HasOne(u => u.Address)
-            .WithOne(a => a.User)
-            .HasForeignKey<Address>(a => a.UserId);
-        
-        modelBuilder.Entity<Address>()
-            .HasOne(a => a.Geo)
-            .WithOne(g => g.Address)
-            .HasForeignKey<Geo>(g => g.AddressId);
-
     }
 }
